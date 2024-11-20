@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/profskipulag/ST540104:
+      branch: main
+      repo: https://github.com/profskipulag/ST540104
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/profskipulag/ST540104 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-viridian-spoonbill.sh
+        container: qc.acc_randy-mauve-yak
+  QC.Doc:
+    repos:
+      github.com/profskipulag/ST540104 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-thistle-spoonbill.sh
+        container: qc.doc_skimpy-khaki-goose
+      github.com/profskipulag/ST540104 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-auburn-monkey.sh
+        container: qc.doc_chewy-cornflower-monster
+      github.com/profskipulag/ST540104 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-rose-chamois.sh
+        container: qc.doc_cheeky-ochre-hippopotamus
+  QC.Lic:
+    repos:
+      github.com/profskipulag/ST540104 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-chestnut-drever.sh
+        container: qc.lic_muggy-puce-moth
+  QC.Sec:
+    repos:
+      github.com/profskipulag/ST540104 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-puce-ibis.sh
+        container: qc.sec_cheeky-white-mole
+  QC.Sty:
+    repos:
+      github.com/profskipulag/ST540104 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-carmine-drever.sh
+        container: qc.sty_shaggy-coral-rottweiler
+  QC.Uni:
+    repos:
+      github.com/profskipulag/ST540104 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-olive-forest.sh
+        container: qc.uni_chummy-sangria-zorse
+  QC.Ver:
+    repos:
+      github.com/profskipulag/ST540104 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-pear-echidna.sh
+        container: qc.ver_seedy-cream-otter
+timeout: 5400
