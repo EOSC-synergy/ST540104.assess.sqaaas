@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/profskipulag/ST540104 git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-fuchsia-dolphin.sh
-        container: qc.acc_snippy-malachite-bird
+        - /usr/bin/env sh .sqa/script.droopy-violet-hound.sh
+        container: qc.acc_boozy-buff-woodlouse
   QC.Doc:
     repos:
       github.com/profskipulag/ST540104 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-pumpkin-hyena.sh
-        container: qc.doc_cheeky-red-nightingale
+        - /usr/bin/env sh .sqa/script.slimy-lilac-giraffe.sh
+        container: qc.doc_snippy-blue-schnauzer
       github.com/profskipulag/ST540104 git:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-sapphire-havanese.sh
-        container: qc.doc_muzzy-salmon-squirt
+        - /usr/bin/env sh .sqa/script.droopy-wisteria-stingray.sh
+        container: qc.doc_stuffy-vermilion-mongrel
       github.com/profskipulag/ST540104 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-carmine-eagle.sh
-        container: qc.doc_beady-thistle-magpie
+        - /usr/bin/env sh .sqa/script.stinky-emerald-hummingbird.sh
+        container: qc.doc_shaggy-lime-bordeaux
   QC.Lic:
     repos:
       github.com/profskipulag/ST540104 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-pumpkin-sheep.sh
-        container: qc.lic_scummy-malachite-worm
+        - /usr/bin/env sh .sqa/script.homely-gold-hornet.sh
+        container: qc.lic_skanky-grey-spitz
   QC.Sec:
     repos:
       github.com/profskipulag/ST540104 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-platinum-horse.sh
-        container: qc.sec_skanky-bistre-duck
+        - /usr/bin/env sh .sqa/script.sleazy-sapphire-gopher.sh
+        container: qc.sec_muggy-sapphire-dragon
   QC.Sty:
     repos:
       github.com/profskipulag/ST540104 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-copper-ferret.sh
-        container: qc.sty_grumpy-thistle-tuatara
+        - /usr/bin/env sh .sqa/script.ready-dandelion-bulldog.sh
+        container: qc.sty_cozy-ecru-urchin
   QC.Uni:
     repos:
       github.com/profskipulag/ST540104 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-asparagus-seahorse.sh
-        container: qc.uni_muggy-cerise-orangutan
+        - /usr/bin/env sh .sqa/script.leaky-amethyst-ocelot.sh
+        container: qc.uni_hilly-cornflower-wolf
   QC.Ver:
     repos:
       github.com/profskipulag/ST540104 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-red-bear.sh
-        container: qc.ver_goopy-buff-hare
+        - /usr/bin/env sh .sqa/script.flaky-ultramarine-squid.sh
+        container: qc.ver_freaky-indigo-woodlouse
 timeout: 5400
